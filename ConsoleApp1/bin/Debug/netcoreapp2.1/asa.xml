@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<TraceResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Theards>
+    <TheardTraceResult>
+      <Methods>
+        <MethodTraceResult>
+          <TaxRate>das</TaxRate>
+          <MethodClassName>hah</MethodClassName>
+          <MethodExecuteTime>huh</MethodExecuteTime>
+          <Methods />
+        </MethodTraceResult>
+      </Methods>
+    </TheardTraceResult>
+    <TheardTraceResult>
+      <Methods>
+        <MethodTraceResult>
+          <TaxRate>das</TaxRate>
+          <MethodClassName>hah</MethodClassName>
+          <MethodExecuteTime>huh</MethodExecuteTime>
+          <Methods />
+        </MethodTraceResult>
+      </Methods>
+    </TheardTraceResult>
+  </Theards>
+</TraceResult>
