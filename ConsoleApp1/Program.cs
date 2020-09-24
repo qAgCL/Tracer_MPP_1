@@ -17,14 +17,18 @@ namespace ConsoleApp1
         {
 
             Tracer test = new Tracer();
-            //Foo test2 = new Foo(test);
-            //test2.MyMethod();
-            Test asd = new Test(test);
-            asd.Rec(1);
-            XmlSir xmlSir = new XmlSir();
-            XmlOutPut xmlOutPut = new XmlOutPut();
+            Stopwatch stopwatch = new Stopwatch();
+
+             Test test1 = new Test(test);
+            test1.Rec(1);
+
+             Foo test2 = new Foo(test);
+             test2.MyMethod();
+
+             XmlSir xmlSir = new XmlSir();
+             XmlOutPut xmlOutPut = new XmlOutPut();
             xmlOutPut.ConsoleOut(xmlSir.Serialize(test.GetTraceResult()));
-    
+
             Console.ReadLine();
         }
     }
@@ -40,6 +44,7 @@ namespace ConsoleApp1
         {
             _tracer.StartTrace();
             i++;
+            Thread.Sleep(4);
             if (i < 4) Rec(i);
             _tracer.StopTrace();
         }
@@ -57,6 +62,7 @@ namespace ConsoleApp1
         {
             _tracer.StartTrace();
             _bar.InnerMethod();
+            Thread.Sleep(5);    
             _tracer.StopTrace();
         }
     }
@@ -71,15 +77,15 @@ namespace ConsoleApp1
         public void InnerMethod()
         {
             _tracer.StartTrace();
+            Thread.Sleep(4);
             _tracer.StopTrace();
         }
     }
     public class Tracer: ITracer
     {
-
-        private Stopwatch ExecTime = new Stopwatch();
-        private static TraceResult TraceInfo = new TraceResult();
-        private static ConcurrentDictionary<int, int> MethodStack = new ConcurrentDictionary<int, int>();
+        private ConcurrentDictionary<int, List<Stopwatch>> StackExuc = new ConcurrentDictionary<int, List<Stopwatch>>();
+        private TraceResult TraceInfo = new TraceResult();
+        private ConcurrentDictionary<int, int> MethodStack = new ConcurrentDictionary<int, int>();
         private void Method(int idTheard, string MethodName, string ClassName)
         {
             List<MethodTraceResult> ListMethod = new List<MethodTraceResult>();
@@ -106,20 +112,31 @@ namespace ConsoleApp1
             {
                 TraceInfo.Theards[idTheard].TheardID = idTheard;
                 MethodStack.TryAdd(idTheard, 0);
+                StackExuc.TryAdd(idTheard, new List<Stopwatch>()); 
             }
             MethodStack[idTheard]++;
+            StackExuc[idTheard].Add(new Stopwatch());
             Method(idTheard, MethodName, ClassMethodName);
-            ExecTime.Start();
+            StackExuc[idTheard][StackExuc[idTheard].Count - 1].Start();
         }
         public void StopTrace() {
-            ExecTime.Stop();
             int idTheard = Thread.CurrentThread.ManagedThreadId;
+            StackExuc[idTheard][StackExuc[idTheard].Count - 1].Stop();
+            List<MethodTraceResult> ListMethod = new List<MethodTraceResult>();
+            ListMethod = TraceInfo.Theards[idTheard].Methods;
+            for (int i = 1; i < MethodStack[idTheard]; i++)
+            {
+                ListMethod = ListMethod[ListMethod.Count - 1].Methods;
+            }
+            ListMethod[ListMethod.Count - 1].MethodExecuteTime = StackExuc[idTheard][StackExuc[idTheard].Count - 1].ElapsedMilliseconds;
+            StackExuc[idTheard].Remove(StackExuc[idTheard][StackExuc[idTheard].Count - 1]);
             MethodStack[idTheard]--;
-        }
-        public TraceResult GetTraceResult( )
-        {
-            return TraceInfo;
-        }
+             }
+            public TraceResult GetTraceResult( )
+            {
+                return TraceInfo;
+            }
+            
     }
     public class JsonSir: ISir
     {
@@ -210,7 +227,7 @@ namespace ConsoleApp1
     {
         public string MethodName;
         public string MethodClassName;
-        public int MethodExecuteTime;
+        public long MethodExecuteTime;
         public List<MethodTraceResult> Methods = new List<MethodTraceResult>();
     }
     public class TheardTraceResult
