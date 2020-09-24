@@ -13,23 +13,28 @@ namespace ConsoleApp1
 {
     class Program
     {
+        static Tracer test = new Tracer();
         static void Main(string[] args)
         {
+            
 
-            Tracer test = new Tracer();
-            Stopwatch stopwatch = new Stopwatch();
-
-             Test test1 = new Test(test);
+           
+            Thread myThread = new Thread(new ThreadStart(Theard));
+            myThread.Start(); // запускаем поток
+            Test test1 = new Test(test);
             test1.Rec(1);
+            Thread.Sleep(500);
+            XmlSir xmlSir = new XmlSir();
+            XmlOutPut xmlOutPut = new XmlOutPut();
 
-             Foo test2 = new Foo(test);
-             test2.MyMethod();
-
-             XmlSir xmlSir = new XmlSir();
-             XmlOutPut xmlOutPut = new XmlOutPut();
             xmlOutPut.ConsoleOut(xmlSir.Serialize(test.GetTraceResult()));
-
             Console.ReadLine();
+            }
+
+        public static void Theard()
+        {
+            Test test1 = new Test(test);
+            test1.Rec(2);
         }
     }
     public class Test

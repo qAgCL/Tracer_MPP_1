@@ -1,0 +1,14 @@
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.deps.json
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.runtimeconfig.json
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.runtimeconfig.dev.json
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.dll
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ConsoleApp2.pdb
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csproj.CoreCompileInputs.cache
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.AssemblyInfoInputs.cache
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.AssemblyInfo.cs
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.dll
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.pdb
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ClassLibrary1.dll
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\bin\Debug\netcoreapp2.1\ClassLibrary1.pdb
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csprojAssemblyReference.cache
+D:\5 сем\СПП\ConsoleApp1\ConsoleApp2\obj\Debug\netcoreapp2.1\ConsoleApp2.csproj.CopyComplete
