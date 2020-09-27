@@ -6,5 +6,6 @@ namespace TracerLib
     {
         public List<MethodTraceResult> Methods = new List<MethodTraceResult>();
         public int TheardID;
+        public long ExecuteTime;
     }
 }

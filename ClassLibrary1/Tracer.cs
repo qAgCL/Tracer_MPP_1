@@ -61,6 +61,15 @@ namespace TracerLib
             }
             public TraceResult GetTraceResult()
             {
+                foreach (KeyValuePair<int, TheardTraceResult> theard in TraceInfo.Theards)
+                {
+                    long time = 0;
+                    foreach (MethodTraceResult Method in theard.Value.Methods)
+                    {
+                        time += Method.MethodExecuteTime;
+                    }
+                    theard.Value.ExecuteTime=time;
+                }
                 return TraceInfo;
             }
     }

@@ -16,13 +16,22 @@ namespace ConsoleOut
         static Tracer tracer = new Tracer();
         static void Main(string[] args)
         {
+
+            Thread myThread = new Thread(new ThreadStart(Theard));
+            myThread.Start(); // запускаем поток
             Test test1 = new Test(tracer);
             test1.Rec(-1);
+            Thread.Sleep(400);
             XmlSir xmlSir = new XmlSir();
             XmlOutPut xmlOutPut = new XmlOutPut();
 
             xmlOutPut.ConsoleOut(xmlSir.Serialize(tracer.GetTraceResult()));
             Console.ReadLine();
+        }
+        public static void Theard()
+        {
+            Test test1 = new Test(tracer);
+            test1.Rec(2);
         }
     }
     public class Test

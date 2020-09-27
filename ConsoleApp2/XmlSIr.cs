@@ -15,13 +15,12 @@ namespace ConsoleOut
             XMLDoc.AppendChild(XMLDec);
             XmlElement XmlRoot = XMLDoc.CreateElement("root");
             XMLDoc.AppendChild(XmlRoot);
-            int i = 1;
             foreach (KeyValuePair<int, TheardTraceResult> theard in TraceResult.Theards)
             {
                 XmlElement XmlTheardElement = XMLDoc.CreateElement("theard");
                 XmlTheardElement.SetAttribute("id", theard.Value.TheardID.ToString());
+                XmlTheardElement.SetAttribute("time", theard.Value.ExecuteTime.ToString()+"ms");
                 GetInfo(theard.Value.Methods, XMLDoc, XmlTheardElement);
-                i++;
                 XmlRoot.AppendChild(XmlTheardElement);
             }
             XMLDoc.Save(stream);

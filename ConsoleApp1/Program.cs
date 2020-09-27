@@ -16,21 +16,23 @@ namespace ConsoleApp1
         static Tracer test = new Tracer();
         static void Main(string[] args)
         {
-            
 
-           
-            Thread myThread = new Thread(new ThreadStart(Theard));
-            myThread.Start(); // запускаем поток
-            Test test1 = new Test(test);
-            test1.Rec(1);
-            Thread.Sleep(500);
-            XmlSir xmlSir = new XmlSir();
-            XmlOutPut xmlOutPut = new XmlOutPut();
 
-            xmlOutPut.ConsoleOut(xmlSir.Serialize(test.GetTraceResult()));
+
+
+            Haha fds = new Haha();
+            fds.x = 12;
+            Haha da = new Haha();
+            da = fds;
+            Console.WriteLine(da.x.ToString());
+            fds.x = 1412;
+            Console.WriteLine(fds.x.ToString());
+            Console.WriteLine(da.x.ToString());
             Console.ReadLine();
-            }
-
+        }
+        public class Haha {
+            public int x;
+          }
         public static void Theard()
         {
             Test test1 = new Test(test);
