@@ -1,0 +1,240 @@
+{
+  "Theards": {
+    "1": {
+      "Methods": [
+        {
+          "MethodName": "FooMethod",
+          "MethodClassName": "Foo",
+          "MethodExecuteTime": 12,
+          "Methods": [
+            {
+              "MethodName": "BarMethod",
+              "MethodClassName": "Bar",
+              "MethodExecuteTime": 6,
+              "Methods": []
+            }
+          ]
+        },
+        {
+          "MethodName": "FoobarMethod",
+          "MethodClassName": "Foobar",
+          "MethodExecuteTime": 15,
+          "Methods": [
+            {
+              "MethodName": "FooMethod",
+              "MethodClassName": "Foo",
+              "MethodExecuteTime": 9,
+              "Methods": [
+                {
+                  "MethodName": "BarMethod",
+                  "MethodClassName": "Bar",
+                  "MethodExecuteTime": 4,
+                  "Methods": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MethodName": "FooMethod",
+          "MethodClassName": "Foo",
+          "MethodExecuteTime": 10,
+          "Methods": [
+            {
+              "MethodName": "BarMethod",
+              "MethodClassName": "Bar",
+              "MethodExecuteTime": 4,
+              "Methods": []
+            }
+          ]
+        },
+        {
+          "MethodName": "FooMethod",
+          "MethodClassName": "Foo",
+          "MethodExecuteTime": 11,
+          "Methods": [
+            {
+              "MethodName": "BarMethod",
+              "MethodClassName": "Bar",
+              "MethodExecuteTime": 4,
+              "Methods": []
+            }
+          ]
+        }
+      ],
+      "TheardID": 1,
+      "ExecuteTime": 48
+    },
+    "3": {
+      "Methods": [
+        {
+          "MethodName": "Recursion",
+          "MethodClassName": "RecursionTest",
+          "MethodExecuteTime": 14,
+          "Methods": [
+            {
+              "MethodName": "Recursion",
+              "MethodClassName": "RecursionTest",
+              "MethodExecuteTime": 9,
+              "Methods": [
+                {
+                  "MethodName": "Recursion",
+                  "MethodClassName": "RecursionTest",
+                  "MethodExecuteTime": 4,
+                  "Methods": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MethodName": "FoobarMethod",
+          "MethodClassName": "Foobar",
+          "MethodExecuteTime": 15,
+          "Methods": [
+            {
+              "MethodName": "FooMethod",
+              "MethodClassName": "Foo",
+              "MethodExecuteTime": 10,
+              "Methods": [
+                {
+                  "MethodName": "BarMethod",
+                  "MethodClassName": "Bar",
+                  "MethodExecuteTime": 4,
+                  "Methods": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MethodName": "Recursion",
+          "MethodClassName": "RecursionTest",
+          "MethodExecuteTime": 9,
+          "Methods": [
+            {
+              "MethodName": "Recursion",
+              "MethodClassName": "RecursionTest",
+              "MethodExecuteTime": 4,
+              "Methods": []
+            }
+          ]
+        },
+        {
+          "MethodName": "BarMethod",
+          "MethodClassName": "Bar",
+          "MethodExecuteTime": 4,
+          "Methods": []
+        }
+      ],
+      "TheardID": 3,
+      "ExecuteTime": 42
+    },
+    "4": {
+      "Methods": [
+        {
+          "MethodName": "FooRec",
+          "MethodClassName": "FooRecTest",
+          "MethodExecuteTime": 44,
+          "Methods": [
+            {
+              "MethodName": "FooMethod",
+              "MethodClassName": "Foo",
+              "MethodExecuteTime": 12,
+              "Methods": [
+                {
+                  "MethodName": "BarMethod",
+                  "MethodClassName": "Bar",
+                  "MethodExecuteTime": 6,
+                  "Methods": []
+                }
+              ]
+            },
+            {
+              "MethodName": "FooRec",
+              "MethodClassName": "FooRecTest",
+              "MethodExecuteTime": 31,
+              "Methods": [
+                {
+                  "MethodName": "FooMethod",
+                  "MethodClassName": "Foo",
+                  "MethodExecuteTime": 10,
+                  "Methods": [
+                    {
+                      "MethodName": "BarMethod",
+                      "MethodClassName": "Bar",
+                      "MethodExecuteTime": 4,
+                      "Methods": []
+                    }
+                  ]
+                },
+                {
+                  "MethodName": "FooRec",
+                  "MethodClassName": "FooRecTest",
+                  "MethodExecuteTime": 21,
+                  "Methods": [
+                    {
+                      "MethodName": "FooMethod",
+                      "MethodClassName": "Foo",
+                      "MethodExecuteTime": 10,
+                      "Methods": [
+                        {
+                          "MethodName": "BarMethod",
+                          "MethodClassName": "Bar",
+                          "MethodExecuteTime": 4,
+                          "Methods": []
+                        }
+                      ]
+                    },
+                    {
+                      "MethodName": "FooRec",
+                      "MethodClassName": "FooRecTest",
+                      "MethodExecuteTime": 10,
+                      "Methods": [
+                        {
+                          "MethodName": "FooMethod",
+                          "MethodClassName": "Foo",
+                          "MethodExecuteTime": 10,
+                          "Methods": [
+                            {
+                              "MethodName": "BarMethod",
+                              "MethodClassName": "Bar",
+                              "MethodExecuteTime": 4,
+                              "Methods": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "MethodName": "FoobarMethod",
+          "MethodClassName": "Foobar",
+          "MethodExecuteTime": 17,
+          "Methods": [
+            {
+              "MethodName": "FooMethod",
+              "MethodClassName": "Foo",
+              "MethodExecuteTime": 11,
+              "Methods": [
+                {
+                  "MethodName": "BarMethod",
+                  "MethodClassName": "Bar",
+                  "MethodExecuteTime": 5,
+                  "Methods": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "TheardID": 4,
+      "ExecuteTime": 61
+    }
+  }
+}
