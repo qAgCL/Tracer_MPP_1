@@ -13,7 +13,7 @@ namespace ConsoleOut
 {
     class Program
     {
-        static Tracer tracer = new Tracer();
+        static Tracer tracer = new Tracer() ;
         static void Main(string[] args)
         {
             
@@ -26,7 +26,6 @@ namespace ConsoleOut
 
             Thread Thread2 = new Thread(new ThreadStart(TheardTest2));
             Thread2.Start();
-
 
             MetWithoutTracer metWithoutTracer = new MetWithoutTracer(tracer);
 
