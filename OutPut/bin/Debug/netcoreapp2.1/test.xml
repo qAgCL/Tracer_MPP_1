@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <theard id="1" time="49ms">
+  <theard id="1" time="54ms">
     <method name="FooMethod" time="12ms" class="Foo">
-      <method name="BarMethod" time="5ms" class="Bar" />
+      <method name="BarMethod" time="6ms" class="Bar" />
     </method>
-    <method name="FoobarMethod" time="16ms" class="Foobar">
-      <method name="FooMethod" time="10ms" class="Foo">
-        <method name="BarMethod" time="4ms" class="Bar" />
+    <method name="FoobarMethod" time="17ms" class="Foobar">
+      <method name="FooMethod" time="11ms" class="Foo">
+        <method name="BarMethod" time="5ms" class="Bar" />
       </method>
     </method>
     <method name="FooMethod" time="10ms" class="Foo">
       <method name="BarMethod" time="4ms" class="Bar" />
     </method>
-    <method name="FooMethod" time="11ms" class="Foo">
-      <method name="BarMethod" time="4ms" class="Bar" />
+    <method name="FooMethod" time="15ms" class="Foo">
+      <method name="BarMethod" time="10ms" class="Bar" />
     </method>
   </theard>
-  <theard id="3" time="43ms">
-    <method name="Recursion" time="14ms" class="RecursionTest">
-      <method name="Recursion" time="9ms" class="RecursionTest">
+  <theard id="3" time="42ms">
+    <method name="Recursion" time="13ms" class="RecursionTest">
+      <method name="Recursion" time="8ms" class="RecursionTest">
         <method name="Recursion" time="4ms" class="RecursionTest" />
       </method>
     </method>
@@ -33,15 +33,15 @@
     <method name="BarMethod" time="4ms" class="Bar" />
   </theard>
   <theard id="4" time="62ms">
-    <method name="FooRec" time="45ms" class="FooRecTest">
-      <method name="FooMethod" time="12ms" class="Foo">
-        <method name="BarMethod" time="5ms" class="Bar" />
+    <method name="FooRec" time="43ms" class="FooRecTest">
+      <method name="FooMethod" time="11ms" class="Foo">
+        <method name="BarMethod" time="6ms" class="Bar" />
       </method>
-      <method name="FooRec" time="32ms" class="FooRecTest">
-        <method name="FooMethod" time="10ms" class="Foo">
+      <method name="FooRec" time="30ms" class="FooRecTest">
+        <method name="FooMethod" time="9ms" class="Foo">
           <method name="BarMethod" time="4ms" class="Bar" />
         </method>
-        <method name="FooRec" time="21ms" class="FooRecTest">
+        <method name="FooRec" time="20ms" class="FooRecTest">
           <method name="FooMethod" time="10ms" class="Foo">
             <method name="BarMethod" time="4ms" class="Bar" />
           </method>
@@ -53,9 +53,9 @@
         </method>
       </method>
     </method>
-    <method name="FoobarMethod" time="17ms" class="Foobar">
-      <method name="FooMethod" time="11ms" class="Foo">
-        <method name="BarMethod" time="5ms" class="Bar" />
+    <method name="FoobarMethod" time="19ms" class="Foobar">
+      <method name="FooMethod" time="13ms" class="Foo">
+        <method name="BarMethod" time="8ms" class="Bar" />
       </method>
     </method>
   </theard>
